@@ -11,7 +11,7 @@ i=0
 
 let "i=i+1"
 printf "\n\n### Check $i: our demo program should compile with your class\n"
-grade_command make -f Makefile demo
+grade_command make -j8 -f Makefile demo 
 printf "### Score $i: $grade\n"
 total=$((total + grade))
 
@@ -23,7 +23,7 @@ total=$((total + grade))
 
 let "i=i+1"
 printf "\n\n### Check $i: your test should compile \n"
-grade_command make -f Makefile test
+grade_command make -j8 -f Makefile test 
 printf "### Score $i: $grade\n"
 total=$((total + grade))
 
